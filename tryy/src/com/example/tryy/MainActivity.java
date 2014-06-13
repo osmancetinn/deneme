@@ -13,15 +13,14 @@ public class MainActivity extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private TextView count;
     boolean activityRunning;
+    TextView tvisim;
    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         count = (TextView) findViewById(R.id.step_value);
-       
-       
-
+        tvisim=(TextView) findViewById(R.id.tvisim);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
 
@@ -45,13 +44,14 @@ public class MainActivity extends Activity implements SensorEventListener {
         // if you unregister the last listener, the hardware will stop detecting step events
 //        sensorManager.unregisterListener(this); 
     }
-
+    int x=0;
     @Override
     public void onSensorChanged(SensorEvent event) {
+    	x++;
         if (activityRunning) {
-            count.setText(String.valueOf(event.values[0]));
+            count.setText("Bu Gun:"+String.valueOf(event.values[0]));
+            tvisim.setText("Şimdi:"+x);
         }
-
     }
 
     @Override
