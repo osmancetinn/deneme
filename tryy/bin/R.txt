@@ -286,6 +286,7 @@ int id submit_area 0x7f050039
 int id tabMode 0x7f050002
 int id title 0x7f05002b
 int id top_action_bar 0x7f050020
+int id tvisim 0x7f05003d
 int id up 0x7f050021
 int id useLogo 0x7f050003
 int id withText 0x7f05000c
