@@ -13,7 +13,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     private SensorManager sensorManager;
     private TextView count;
     boolean activityRunning;
-
+   
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
